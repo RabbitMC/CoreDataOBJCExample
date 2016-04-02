@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "AddDataViewController.h"
 #import <CoreData/CoreData.h>
 
 @interface TableViewController ()
@@ -30,7 +31,8 @@
     return moContext;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
@@ -117,14 +119,20 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // updateCarSegueIdentifier
+    if ([segue.identifier isEqualToString:@"updateCarSegueIdentifier"]) {
+        NSManagedObjectModel *selectedDevice = self.devices[[self.tableView.indexPathForSelectedRow row]];
+
+        AddDataViewController *addViewController = segue.destinationViewController;
+        addViewController.device = selectedDevice;
+    }
 }
-*/
+
 
 @end

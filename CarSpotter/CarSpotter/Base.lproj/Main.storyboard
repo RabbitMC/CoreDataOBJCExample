@@ -37,6 +37,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="npm-wx-G6l" kind="show" identifier="updateCarSegueIdentifier" id="YTo-g3-s75"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -150,4 +153,7 @@
             <point key="canvasLocation" x="400.5" y="159.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YTo-g3-s75"/>
+    </inferredMetricsTieBreakers>
 </document>
