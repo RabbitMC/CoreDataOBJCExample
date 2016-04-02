@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		E7D549E11CAFEEBB0089FFD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D549E01CAFEEBB0089FFD2 /* main.m */; };
 		E7D549E41CAFEEBB0089FFD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D549E31CAFEEBB0089FFD2 /* AppDelegate.m */; };
-		E7D549E71CAFEEBB0089FFD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D549E61CAFEEBB0089FFD2 /* ViewController.m */; };
 		E7D549EA1CAFEEBB0089FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D549E81CAFEEBB0089FFD2 /* Main.storyboard */; };
 		E7D549ED1CAFEEBB0089FFD2 /* CarSpotter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7D549EB1CAFEEBB0089FFD2 /* CarSpotter.xcdatamodeld */; };
 		E7D549EF1CAFEEBB0089FFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D549EE1CAFEEBB0089FFD2 /* Assets.xcassets */; };
 		E7D549F21CAFEEBB0089FFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D549F01CAFEEBB0089FFD2 /* LaunchScreen.storyboard */; };
 		E7D549FD1CAFEEBB0089FFD2 /* CarSpotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D549FC1CAFEEBB0089FFD2 /* CarSpotterTests.m */; };
 		E7D54A081CAFEEBB0089FFD2 /* CarSpotterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A071CAFEEBB0089FFD2 /* CarSpotterUITests.m */; };
+		E7D54A171CAFEF670089FFD2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A161CAFEF670089FFD2 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 		E7D549E01CAFEEBB0089FFD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7D549E21CAFEEBB0089FFD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D549E31CAFEEBB0089FFD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7D549E51CAFEEBB0089FFD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E7D549E61CAFEEBB0089FFD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E7D549E91CAFEEBB0089FFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7D549EC1CAFEEBB0089FFD2 /* CarSpotter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarSpotter.xcdatamodel; sourceTree = "<group>"; };
 		E7D549EE1CAFEEBB0089FFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		E7D54A031CAFEEBB0089FFD2 /* CarSpotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarSpotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D54A071CAFEEBB0089FFD2 /* CarSpotterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarSpotterUITests.m; sourceTree = "<group>"; };
 		E7D54A091CAFEEBB0089FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D54A151CAFEF670089FFD2 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = Controller/TableViewController.h; sourceTree = "<group>"; };
+		E7D54A161CAFEF670089FFD2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = Controller/TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,7 @@
 			children = (
 				E7D549E21CAFEEBB0089FFD2 /* AppDelegate.h */,
 				E7D549E31CAFEEBB0089FFD2 /* AppDelegate.m */,
-				E7D549E51CAFEEBB0089FFD2 /* ViewController.h */,
-				E7D549E61CAFEEBB0089FFD2 /* ViewController.m */,
+				E7D54A181CAFEF6B0089FFD2 /* Controller */,
 				E7D549E81CAFEEBB0089FFD2 /* Main.storyboard */,
 				E7D549EE1CAFEEBB0089FFD2 /* Assets.xcassets */,
 				E7D549F01CAFEEBB0089FFD2 /* LaunchScreen.storyboard */,
@@ -141,6 +140,15 @@
 				E7D54A091CAFEEBB0089FFD2 /* Info.plist */,
 			);
 			path = CarSpotterUITests;
+			sourceTree = "<group>";
+		};
+		E7D54A181CAFEF6B0089FFD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7D54A151CAFEF670089FFD2 /* TableViewController.h */,
+				E7D54A161CAFEF670089FFD2 /* TableViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7D549E71CAFEEBB0089FFD2 /* ViewController.m in Sources */,
 				E7D549E41CAFEEBB0089FFD2 /* AppDelegate.m in Sources */,
 				E7D549ED1CAFEEBB0089FFD2 /* CarSpotter.xcdatamodeld in Sources */,
 				E7D549E11CAFEEBB0089FFD2 /* main.m in Sources */,
+				E7D54A171CAFEF670089FFD2 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
