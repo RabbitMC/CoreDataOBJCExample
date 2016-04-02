@@ -44,11 +44,91 @@
                             <outlet property="delegate" destination="z9C-CT-l9s" id="1Qc-bB-8OA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PSh-cJ-GgK"/>
+                    <navigationItem key="navigationItem" id="PSh-cJ-GgK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ioJ-RV-awM">
+                            <connections>
+                                <segue destination="npm-wx-G6l" kind="show" id="Owo-sr-ApQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLi-Be-gHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.5" y="133.5"/>
+            <point key="canvasLocation" x="858.5" y="159.5"/>
+        </scene>
+        <!--Add Data View Controller-->
+        <scene sceneID="wMb-cu-WNo">
+            <objects>
+                <viewController id="npm-wx-G6l" customClass="AddDataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="riz-2Z-uo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rl3-Bx-R8f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Y2-oY-CO1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8Z-0h-yLA">
+                                <rect key="frame" x="20" y="72" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n19-JF-M5m">
+                                <rect key="frame" x="20" y="101" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="npm-wx-G6l" eventType="editingDidEndOnExit" id="gcl-bc-Ktr"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-QH-VAY">
+                                <rect key="frame" x="20" y="139" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-Xx-HuB">
+                                <rect key="frame" x="20" y="168" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="npm-wx-G6l" eventType="editingDidEndOnExit" id="4Qr-Pc-rYk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc1-MI-r88">
+                                <rect key="frame" x="20" y="206" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hn-PE-7ys">
+                                <rect key="frame" x="20" y="235" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="npm-wx-G6l" eventType="editingDidEndOnExit" id="JdO-Lp-CgU"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7S-YX-tEM">
+                                <rect key="frame" x="20" y="273" width="335" height="30"/>
+                                <state key="normal" title="Save Data"/>
+                                <connections>
+                                    <action selector="saveDataButton:" destination="npm-wx-G6l" eventType="touchUpInside" id="N4e-ZQ-eTW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="carMakeTextfield" destination="n19-JF-M5m" id="oiU-hm-90A"/>
+                        <outlet property="carModelTextfield" destination="MBn-Xx-HuB" id="b61-cy-z6W"/>
+                        <outlet property="carYearTextfield" destination="6Hn-PE-7ys" id="7DX-5g-Yg8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-J9-AL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332.5" y="159.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Gz-3c-UqZ">
@@ -67,7 +147,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrB-Gw-Jak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="134"/>
+            <point key="canvasLocation" x="400.5" y="159.5"/>
         </scene>
     </scenes>
 </document>

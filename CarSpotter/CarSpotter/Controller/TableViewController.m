@@ -7,49 +7,81 @@
 //
 
 #import "TableViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface TableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *devices;
 
 @end
 
 @implementation TableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+#pragma mark - private
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *moContext = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        moContext = [delegate managedObjectContext];
+    }
+
+    return moContext;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    NSManagedObjectContext *moContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
+
+    NSError *fetchError = nil;
+    self.devices = [[moContext executeFetchRequest:fetchRequest error:&fetchError] mutableCopy];
+    if (fetchError) {
+        NSLog(@"Error while fetching from CoreData DataBade %@ %@ %@", fetchError, fetchError.localizedDescription, fetchError.localizedFailureReason);
+    }
+
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.devices.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+
+    NSManagedObject *device = self.devices[indexPath.row];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [device valueForKey:@"text1"], [device valueForKey:@"text2"]]; // car model // car make
+    cell.detailTextLabel.text = [device valueForKey:@"text3"]; // car year
+
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
