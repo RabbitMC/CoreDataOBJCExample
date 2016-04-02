@@ -16,6 +16,7 @@
 		E7D549FD1CAFEEBB0089FFD2 /* CarSpotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D549FC1CAFEEBB0089FFD2 /* CarSpotterTests.m */; };
 		E7D54A081CAFEEBB0089FFD2 /* CarSpotterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A071CAFEEBB0089FFD2 /* CarSpotterUITests.m */; };
 		E7D54A171CAFEF670089FFD2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A161CAFEF670089FFD2 /* TableViewController.m */; };
+		E7D54A1A1CAFEFAA0089FFD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D54A191CAFEFAA0089FFD2 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E7D54A091CAFEEBB0089FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7D54A151CAFEF670089FFD2 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = Controller/TableViewController.h; sourceTree = "<group>"; };
 		E7D54A161CAFEF670089FFD2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = Controller/TableViewController.m; sourceTree = "<group>"; };
+		E7D54A191CAFEFAA0089FFD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D54A1A1CAFEFAA0089FFD2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		E7D549D31CAFEEBB0089FFD2 = {
 			isa = PBXGroup;
 			children = (
+				E7D54A191CAFEFAA0089FFD2 /* CoreData.framework */,
 				E7D549DE1CAFEEBB0089FFD2 /* CarSpotter */,
 				E7D549FB1CAFEEBB0089FFD2 /* CarSpotterTests */,
 				E7D54A061CAFEEBB0089FFD2 /* CarSpotterUITests */,
